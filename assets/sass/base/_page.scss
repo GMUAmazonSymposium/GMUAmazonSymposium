@@ -1,5 +1,5 @@
 ///
-/// Editorial by Pixelarity
+/// Paradigm Shift by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
@@ -33,12 +33,16 @@
 			box-sizing: inherit;
 		}
 
+	html {
+		overflow-x: hidden;
+	}
+
 	body {
 		background: _palette(bg);
+		overflow-x: hidden;
 
-		// Stops initial animations until page loads or stops resizing.
-			&.is-preload,
-			&.is-resizing {
+		// Stops initial animations until page loads.
+			&.is-preload {
 				*, *:before, *:after {
 					@include vendor('animation', 'none !important');
 					@include vendor('transition', 'none !important');
